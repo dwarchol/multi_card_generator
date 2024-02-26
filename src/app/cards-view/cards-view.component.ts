@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Competition } from '../competition';
 import { Competitor } from '../competitor';
 import { EventElement } from '../event-element';
@@ -8,18 +9,20 @@ import { EventElement } from '../event-element';
   styleUrls: ['./cards-view.component.css']
 })
 export class CardsViewComponent {
-  @Input() compId: string;
   group = "";
   round = 1;
   attempts: number;
   compInfo: Competition;
   multiCompetitors: Array<Competitor>;
+  constructor(
+  private route: ActivatedRoute
+  ){}
   ngOnInit(){
-    this.getData()
+    this.getData(this.route.snapshot.paramMap.get('compId'))
   }
-  getData(){
-    Promise.all([fetch(`https://www.worldcubeassociation.org/api/v0/competitions/${this.compId}/wcif/public`)
-      .then(r => r.json()), fetch(`https://www.worldcubeassociation.org/api/v0/competitions/${this.compId}`)
+  getData(competitionId: string){
+    Promise.all([fetch(`https://www.worldcubeassociation.org/api/v0/competitions/${competitionId}/wcif/public`)
+      .then(r => r.json()), fetch(`https://www.worldcubeassociation.org/api/v0/competitions/${competitionId}`)
         .then(r => r.json())])
       .then(res => {
         this.compInfo = res[0]
