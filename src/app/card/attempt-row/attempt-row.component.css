@@ -1,0 +1,9 @@
+td {
+    border: 2px solid black;
+    height: 8mm;
+    text-align: center;
+}
+table {
+    margin-inline: 5mm;
+    font-size: x-large;
+}

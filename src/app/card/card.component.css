@@ -1,0 +1,32 @@
+.card {
+    width: 135mm;
+    height: 90mm;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.h3{
+    justify-self: center;
+}
+table{
+    border: none;
+    margin-inline: 5mm;
+  }
+th {
+    height: 3mm;
+    font-size: x-small;
+    font-weight: 200;
+}
+td {
+    height: 5mm;
+    padding-block: 2px;
+    border: 2px solid black;
+}
+hr {
+    border: none;
+  border-top: 1px dashed rgb(99, 99, 99);
+  margin-inline: 3mm;
+}
+h1{
+    font-size: medium;
+    font-weight: 800;
+    margin-block: 3px;
+}

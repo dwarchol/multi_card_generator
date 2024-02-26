@@ -1,0 +1,10 @@
+<div class="container">
+    <app-card *ngFor="let competitor of multiCompetitors" 
+    [compName]="compInfo.name" 
+    [name]="competitor.name"
+    [id]="competitor.registrantId"
+    [group]="group" 
+    [round]="round"
+    [numberOfAttempts]="attempts"
+    ></app-card>
+</div>

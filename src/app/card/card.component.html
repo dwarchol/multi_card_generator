@@ -1,0 +1,82 @@
+<div class="card">
+    <table>
+        <tr>
+            <th rowspan="2" style="width: 85mm">
+                <h1>{{compName}}</h1>
+            </th>
+            <th style="width: 40mm; padding-top: 5mm;">
+                Event
+            </th>
+            </tr>
+            <tr>
+            <td style="width: 40mm; text-align: center;">
+                3x3x3 Multi-Blind
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th style="width: 10mm;">
+                Id
+            </th>
+            <th style="width: 90mm;">
+                Name
+            </th>
+            <th style="width: 5mm;">
+            </th>
+            <th style="width: 10mm;">
+                Round
+            </th>
+            <th style="width: 10mm;">
+                Group
+            </th>
+        </tr>
+        <tr>
+            <td style="width: 10mm; text-align: center;">
+                {{id}}
+            </td>
+            <td style="width: 90mm; padding-left: 5px;">
+                {{name}}
+            </td>
+            <th style="width: 5mm;">
+            </th>
+            <td style="width: 10mm; text-align: center;">
+                {{round}}
+            </td>
+            <td style="width: 10mm; text-align: center;">
+                {{group}}
+            </td>
+        </tr>
+    </table>
+    <table>
+        <th style="width: 10mm;">
+
+        </th>
+        <th style="width: 10mm;">
+            Del
+        </th>
+        <th style="width: 10mm;">
+            Scr
+        </th>
+        <th style="width: 25mm;">
+            Result
+        </th>
+        <th style="width: 50mm;">
+            Time
+        </th>
+        <th style="width: 10mm;">
+            Judge
+        </th>
+        <th style="width: 10mm;">
+            Comp
+        </th>
+    </table>
+    <app-attempt-row *ngFor="let item of arr;" [number]="item"></app-attempt-row>
+    <hr />
+    <table>
+        <th>
+            Extra attempt
+        </th>
+    </table>
+    <app-attempt-row [number]="'_'"></app-attempt-row>
+</div>
