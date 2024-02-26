@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+
+<div *ngIf="!compId">
+<input type="text" placeholder="Competition ID" [(ngModel)]="compIdInput">
+<button 
+(click)="generateCards()"
+>Generate</button>
+</div>
+<app-cards-view *ngIf="compId" [compId]="compId"></app-cards-view>

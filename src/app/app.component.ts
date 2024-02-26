@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'multi_card_generator';
-  
+  compIdInput = "";
+  compId;
+  generateCards(){
+      console.log(this.compIdInput)
+      this.compId=this.compIdInput;
+  }
 }

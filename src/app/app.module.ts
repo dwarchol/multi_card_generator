@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { AttemptRowComponent } from './card/attempt-row/attempt-row.component';
-import { provideRouter } from '@angular/router';
 import { CardsViewComponent } from './cards-view/cards-view.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,7 @@ import { CardsViewComponent } from './cards-view/cards-view.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
